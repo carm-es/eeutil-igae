@@ -2,15 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-	<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-starter-parent</artifactId>
-	<version>2.7.0</version>
-	<relativePath /> 
+    <groupId>es.carm.eeutil</groupId>
+    <artifactId>igae-mvn-base-wrapper</artifactId>
+    <version>6.8.2-CARM.1-SNAPSHOT</version>
+    <relativePath>../..</relativePath>
   </parent>
   <groupId>es.gob.ad.gestdoc</groupId>
   <artifactId>eeutil-rest-igae</artifactId>
-  <version>6.8.2</version>
-  <packaging>${packaging.type}</packaging>
+  <packaging>war</packaging>
   <name>eeutil-igae</name>
   <description>Demo project for Spring Boot</description>
   <properties>
