@@ -11,7 +11,7 @@
   
   <groupId>es.carm.eeutil</groupId>
   <artifactId>igae-mvn-base-wrapper</artifactId>
-  <version>6.8.2-CARM.2-SNAPSHOT</version>
+  <version>6.8.2-CARM.6-SNAPSHOT</version>
 
   <packaging>pom</packaging>
 
