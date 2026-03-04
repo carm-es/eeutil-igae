@@ -13,7 +13,7 @@ package es.gob.aapp.eeutil.eeutilrestigae.services;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.tomcat.util.codec.binary.Base64;
+import java.util.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -55,7 +55,7 @@ public class XMLService {
       // librerias de IGAE
       TransformXml xml = new TransformXml();
 
-      salidaXML = Base64.encodeBase64(xml.transformar(Base64.decodeBase64(entrada)));
+      salidaXML = Base64.getEncoder().encode(xml.transformar(Base64.getDecoder().decode(entrada)));
 
       // Se copia el fichero generado al fichero que devolveremos
       // String fileReturnPath = fileUtil.createFilePath(XML_PREFIX,

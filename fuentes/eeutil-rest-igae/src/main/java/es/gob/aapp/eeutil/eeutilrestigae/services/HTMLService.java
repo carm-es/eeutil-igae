@@ -15,7 +15,7 @@ import java.io.ByteArrayOutputStream;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.tomcat.util.codec.binary.Base64;
+import java.util.Base64;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.springframework.stereotype.Component;
@@ -34,7 +34,7 @@ public class HTMLService {
   public byte[] convertHTMLtoPDF(byte[] facturaE_HTML) throws EeutilRestException {
     byte[] salida = null;
 
-    facturaE_HTML = Base64.decodeBase64(facturaE_HTML);
+    facturaE_HTML = Base64.getDecoder().decode(facturaE_HTML);
 
     try (ByteArrayOutputStream bos = new ByteArrayOutputStream();) {
       // pasar de html a xhtml
@@ -51,7 +51,7 @@ public class HTMLService {
       // salida= Arrays.copyOf(bos.toByteArray(),bos.toByteArray().length);
       salida = bos.toByteArray();
 
-      salida = Base64.encodeBase64(salida);
+      salida = Base64.getEncoder().encode(salida);
 
     } catch (Exception e) {
       throw new EeutilRestException(e.getMessage(), e);

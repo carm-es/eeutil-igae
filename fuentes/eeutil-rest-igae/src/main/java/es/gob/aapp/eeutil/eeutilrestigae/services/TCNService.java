@@ -15,7 +15,7 @@ import java.nio.charset.StandardCharsets;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.tomcat.util.codec.binary.Base64;
+import java.util.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -59,7 +59,8 @@ public class TCNService {
       // librerias de IGAE
       TransformTcn tcn = new TransformTcn();
 
-      byte[] salidaTCN = Base64.encodeBase64(tcn.transformar(Base64.decodeBase64(entrada)));
+      byte[] salidaTCN =
+          Base64.getEncoder().encode(tcn.transformar(Base64.getDecoder().decode(entrada)));
 
       // Se copia el fichero generado al fichero que devolveremos
       // String fileReturnPath = fileUtil.createFilePath(TELCON_PREFIX,
