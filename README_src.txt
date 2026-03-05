@@ -21,5 +21,3 @@ Los componentes incluidos en eeutil-igae-src.zip se enumeran a continuaci�n:
 	- LICENSE_EUPL_1.1.pdf: Licencia EUPL1.1, bajo la que se distribuye Inside.
 	
 
-
-
